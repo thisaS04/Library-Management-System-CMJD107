@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="83.0" prefWidth="600.0" style="-fx-background-color: #487eb0;" BorderPane.alignment="CENTER">
@@ -17,7 +16,12 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="127.0" layoutY="13.0" text="👥">
+            <Label layoutX="127.0" layoutY="13.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="137.0" layoutY="23.0">
                <font>
                   <Font size="24.0" />
                </font>

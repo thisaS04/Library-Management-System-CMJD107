@@ -13,7 +13,7 @@
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #487eb0;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="21.0" layoutY="14.0" text="Book 📕➕">
+            <Label layoutX="21.0" layoutY="14.0" text="Book ">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>

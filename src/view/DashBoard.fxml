@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="btnMembers" layoutX="306.0" layoutY="100.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Members">
@@ -39,7 +38,7 @@
          </font>
       </Button>
       <AnchorPane prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #487eb0;" />
-      <Label fx:id="lblWelcomeH" layoutX="341.0" layoutY="24.0" text="Welcome 📚 ">
+      <Label fx:id="lblWelcomeH" layoutX="341.0" layoutY="24.0" text="Welcome ">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

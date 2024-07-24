@@ -17,7 +17,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="160.0" layoutY="4.0" prefHeight="50.0" prefWidth="37.0" text="📕">
+            <Label layoutX="160.0" layoutY="4.0" prefHeight="50.0" prefWidth="37.0">
                <font>
                   <Font size="14.0" />
                </font>
