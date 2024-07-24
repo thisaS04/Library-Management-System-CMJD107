@@ -13,7 +13,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <PasswordField fx:id="txtPW" layoutX="372.0" layoutY="187.0" prefHeight="27.0" prefWidth="149.0" promptText="Password" style="-fx-background-color: transpaent; -fx-border-color: #1e272e; -fx-border-width: 0px 0px 2px 0px;">
@@ -34,7 +33,7 @@
       </TextField>
       <Icon content="PERSON" layoutX="344.0" layoutY="145.0" />
       <Icon content="KEYBOARD_HIDE" layoutX="345.0" layoutY="194.0" />
-      <Button fx:id="btnLogin" layoutX="372.0" layoutY="251.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #7f8fa6;" text="Login" textAlignment="JUSTIFY">
+      <Button fx:id="btnLogin" layoutX="372.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #7f8fa6;" text="Login" textAlignment="JUSTIFY">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -79,7 +78,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="btnSignUp" layoutX="459.0" layoutY="251.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #7f8fa6;" text="SignUp" textAlignment="JUSTIFY">
+      <Button fx:id="btnSignUp" layoutX="459.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="31.0" prefWidth="61.0" style="-fx-background-color: #7f8fa6;" text="SignUp" textAlignment="JUSTIFY">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

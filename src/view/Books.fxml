@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BooksController">
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #487eb0;" BorderPane.alignment="CENTER">
          <children>
@@ -48,17 +47,17 @@
             <TextField fx:id="txtAuthor" layoutX="109.0" layoutY="90.0" promptText="Author" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtCategoryID" layoutX="109.0" layoutY="123.0" promptText="category" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtAvailability" layoutX="111.0" layoutY="151.0" promptText="Availability" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btnAdd" layoutX="336.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Add">
+            <Button fx:id="btnAdd" layoutX="336.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="55.0" text="Add">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnDelete" layoutX="401.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Delete">
+            <Button fx:id="btnDelete" layoutX="401.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="63.0" text="Delete">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnUpdate" layoutX="472.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Update">
+            <Button fx:id="btnUpdate" layoutX="472.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="63.0" text="Update">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
