@@ -47,7 +47,7 @@
             <TextField fx:id="txtAuthor" layoutX="109.0" layoutY="90.0" promptText="Author" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtCategoryID" layoutX="109.0" layoutY="123.0" promptText="category" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtAvailability" layoutX="111.0" layoutY="151.0" promptText="Availability" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btnAdd" layoutX="336.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="55.0" text="Add">
+            <Button fx:id="btnSave" layoutX="336.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="55.0" text="Save">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
