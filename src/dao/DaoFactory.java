@@ -18,12 +18,14 @@ public class DaoFactory {
         switch (type) {
             case BOOK:
             return new BookDaoImpl();
+            case BookCategory:
+            return new BookCategoryDaoImpl();
             default:
             return null;
 }
     }
     public enum DaoTypes {
-        BOOK
+        BOOK,BookCategory
     }
 
 }

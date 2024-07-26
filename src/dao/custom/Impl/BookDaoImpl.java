@@ -45,7 +45,7 @@ public class BookDaoImpl implements BookDao {
     @Override
     public ArrayList<BookEntity> getAll() throws Exception {
         ArrayList<BookEntity> bookEntitys = new ArrayList<>();
-        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
+        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books");
         while (rst.next()) {
             BookEntity entity = new BookEntity(rst.getLong("book_id"), rst.getString("title"),
             rst.getString("author"), rst.getLong("category_id"), rst.getBoolean("available"));

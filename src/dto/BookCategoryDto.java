@@ -1,22 +1,22 @@
 package dto;
 
 public class BookCategoryDto {
-    private int id;
+    private Long categoryId;
     private String categoryName;
 
 public BookCategoryDto(){
 
 }
-public BookCategoryDto(int id, String categoryName){
-    this.id=id;
+public BookCategoryDto(Long categoryId , String categoryName){
+    this.categoryId=categoryId;
     this.categoryName=categoryName;
 
 }
-public int getId() {
-    return id;
+public Long getCategoryId() {
+    return categoryId;
 }
-public void setId(int id) {
-    this.id = id;
+public void setCategoryId(Long categoryId) {
+    this.categoryId = categoryId;
 }
 public String getCategoryName() {
     return categoryName;
@@ -26,7 +26,8 @@ public void setCategoryName(String categoryName) {
 }
 @Override
 public String toString() {
-    return "BookCategoryDto [id=" + id + ", categoryName=" + categoryName + "]";
+    return "BookCategoryDto [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
 }
+
 
 }

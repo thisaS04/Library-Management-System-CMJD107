@@ -2,20 +2,20 @@ package entity;
 
 public class BookCategory {
     
-    private int id;
+    private Long categoryId;
     private String categoryName;
 
-    public BookCategory(int id, String categoryName){
-        this.id=id;
+    public BookCategory(Long categoryId, String categoryName){
+        this.categoryId=categoryId;
         this.categoryName=categoryName;
     }
 
-    public int getId() {
-        return id;
+    public Long getCategoryId() {
+        return categoryId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getCategoryName() {
@@ -28,8 +28,9 @@ public class BookCategory {
 
     @Override
     public String toString() {
-        return "BookCategory [id=" + id + ", categoryName=" + categoryName + "]";
+        return "BookCategory [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
     }
-    
+
+   
 
 }
