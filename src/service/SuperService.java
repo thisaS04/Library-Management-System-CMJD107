@@ -1,5 +1,5 @@
 package service;
 
-public class SuperService {
+public interface SuperService {
     
 }

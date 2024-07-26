@@ -9,7 +9,7 @@ public class BookEntity {
 
    
  public BookEntity(Long id,String title, String author, Long categoryId,boolean available){
-     this.id=id;
+    this.id=id;
      this.title=title;
      this.author = author;
      this.categoryId = categoryId;
@@ -73,6 +73,6 @@ public String toString() {
     return "BookEntity [id=" + id + ", title=" + title + ", author=" + author + ", categoryId=" + categoryId
             + ", available=" + available + "]";
 }
- 
+
 
 }

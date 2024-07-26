@@ -25,13 +25,13 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public String delete(String id) throws Exception {
+    public String delete(Long id) throws Exception {
         boolean isDeleted = CrudUtil.executeUpdate("DELETE FROM books WHERE book_id =?", id);
         return isDeleted ? "Success" : "Fail";
     }
 
     @Override
-    public BookEntity get(String id) throws Exception {
+    public BookEntity get(Long id) throws Exception {
         
             ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books WHERE  book_id=?", id);
             if (rst.next()) {

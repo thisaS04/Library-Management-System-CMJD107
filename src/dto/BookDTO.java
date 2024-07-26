@@ -1,7 +1,7 @@
 package dto;
 
 public class BookDto {
-    private int id;
+    private Long id;
     private String title;
     private String author;
     private Long categoryId;
@@ -10,7 +10,7 @@ public class BookDto {
  public BookDto(){
 
  }
-public BookDto(int id, String title,String author,Long categoryId,boolean available ){
+public BookDto(Long id, String title,String author,Long categoryId,boolean available ){
     this.id=id;
     this.title=title;
     this.author=author;
@@ -18,10 +18,10 @@ public BookDto(int id, String title,String author,Long categoryId,boolean availa
     this.available=available;
     
 }
-public int getId() {
+public Long getId() {
     return id;
 }
-public void setId(int id) {
+public void setId(Long id) {
     this.id = id;
 }
 public String getTitle() {
