@@ -1,5 +1,6 @@
 package dao;
 
+import dao.custom.Impl.BookCategoryDaoImpl;
 import dao.custom.Impl.BookDaoImpl;
 
 public class DaoFactory {
@@ -19,7 +20,7 @@ public class DaoFactory {
             case BOOK:
             return new BookDaoImpl();
             case BookCategory:
-            return new BookCategoryDaoImpl();
+            return new BookCategoryDaoImpl(null);
             default:
             return null;
 }

@@ -8,11 +8,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class BookCategorycontroller {
-     @FXML
-    private Button btnAdd;
-
     @FXML
     private Button btnDeleteCategory;
+
+    @FXML
+    private Button btnSave;
 
     @FXML
     private Button btnUpdate;
@@ -46,5 +46,4 @@ public class BookCategorycontroller {
     void btnUpdateOnAction(ActionEvent event) {
 
     }
-
 }

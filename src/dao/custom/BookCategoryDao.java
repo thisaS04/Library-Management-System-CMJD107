@@ -10,4 +10,3 @@ import entity.BookCategory;
 public interface BookCategoryDao extends CrudDao<BookCategory, Long> { 
    
 }
-s
