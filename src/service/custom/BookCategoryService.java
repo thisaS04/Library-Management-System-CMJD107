@@ -7,7 +7,7 @@ import dto.BookCategoryDto;
 import service.SuperService;
 
 public interface BookCategoryService extends SuperService {
-       public String save(BookCategoryDto dto) throws Exception;
+     public String save(BookCategoryDto dto) throws Exception;
     public String update(BookCategoryDto dto) throws Exception;
     public String delete(Long id) throws Exception;
     public BookCategoryDto get(Long id) throws Exception;

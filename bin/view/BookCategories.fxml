@@ -53,8 +53,8 @@
       </AnchorPane>
       <TableView fx:id="tblCategory" layoutX="303.0" layoutY="83.0" prefHeight="200.0" prefWidth="257.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="category_id" />
-          <TableColumn prefWidth="180.66664632161456" text="category_name" />
+          <TableColumn fx:id="colCategoryId" prefWidth="75.0" text="category_id" />
+          <TableColumn fx:id="colCategoryName" prefWidth="180.66664632161456" text="category_name" />
         </columns>
       </TableView>
    </children>

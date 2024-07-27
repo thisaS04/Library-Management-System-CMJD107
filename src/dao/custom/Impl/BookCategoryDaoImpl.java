@@ -50,8 +50,9 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
     public String update(BookCategory category) throws Exception {
        String query = "UPDATE book_categories SET category_name = ? WHERE category_id = ?";
        try(PreparedStatement stmt = connection.prepareStatement(query)){
-        stmt.setLong(1, category.getCategoryId());
-        stmt.setString(2, category.getCategoryName());
+        stmt.setString(1, category.getCategoryName());
+        stmt.setLong(2, category.getCategoryId());
+       
         int rowsAffected = stmt.executeUpdate();
 
         return rowsAffected > 0 ? "Updated successfully" : "Failed to Update";

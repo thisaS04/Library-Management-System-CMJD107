@@ -1,11 +1,17 @@
 package dao;
 
+import java.sql.Connection;
+
 import dao.custom.Impl.BookCategoryDaoImpl;
 import dao.custom.Impl.BookDaoImpl;
+import db.DBConnection;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;
-    private DaoFactory(){
+    private Connection connection;
+
+     private DaoFactory() {
+        this.connection = DBConnection.getInstance().getConnection();
 
     }
     public static DaoFactory getInstance() {
@@ -18,15 +24,15 @@ public class DaoFactory {
     public SuperDAO getDao(DaoTypes type) {
         switch (type) {
             case BOOK:
-            return new BookDaoImpl();
-            case BookCategory:
-            return new BookCategoryDaoImpl(null);
+            return new BookDaoImpl(connection);
+            case BOOKCATEGORY:
+            return new BookCategoryDaoImpl(connection);
             default:
             return null;
 }
     }
     public enum DaoTypes {
-        BOOK,BookCategory
+        BOOK,BOOKCATEGORY
     }
 
 }
