@@ -33,12 +33,12 @@ public class BookCategorycontroller {
     private TextField txtCategoryName;
 
     @FXML
-    void btnAddOnAction(ActionEvent event) {
+    void btnDeleteOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void btnDeleteOnAction(ActionEvent event) {
+    void btnSaveOnAction(ActionEvent event) {
 
     }
 
@@ -46,4 +46,5 @@ public class BookCategorycontroller {
     void btnUpdateOnAction(ActionEvent event) {
 
     }
+
 }
