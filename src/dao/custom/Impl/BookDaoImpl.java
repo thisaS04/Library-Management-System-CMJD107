@@ -40,22 +40,22 @@ public class BookDaoImpl implements BookDao {
             }
             return null;
         }
-
-
-    @Override
-    public ArrayList<BookEntity> getAll() throws Exception {
-        ArrayList<BookEntity> bookEntitys = new ArrayList<>();
-        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books");
-        while (rst.next()) {
-            BookEntity entity = new BookEntity(rst.getLong("book_id"), rst.getString("title"),
-            rst.getString("author"), rst.getLong("category_id"), rst.getBoolean("available"));
+        @Override
+        public ArrayList<BookEntity> getAll() throws Exception {
+            ArrayList<BookEntity> bookEntities = new ArrayList<>();
+            ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books");
+            while (rst.next()) {
+                BookEntity entity = new BookEntity(
+                    rst.getLong("book_id"),
+                    rst.getString("title"),
+                    rst.getString("author"),
+                    rst.getLong("category_id"),
+                    rst.getBoolean("available")
+                );
+                bookEntities.add(entity);
+            }
+            return bookEntities;
         }
-
-        return bookEntitys;
-        
     }
-}
 
-
-
-
+   
