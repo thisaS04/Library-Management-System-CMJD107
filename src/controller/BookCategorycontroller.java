@@ -53,8 +53,8 @@ public class BookCategorycontroller {
 
     @FXML
     public void initialize(){
-        colCategoryId.setCellValueFactory(new PropertyValueFactory<>("category_id"));
-        colCategoryName.setCellValueFactory(new PropertyValueFactory<>("category_name"));
+        colCategoryId.setCellValueFactory(new PropertyValueFactory<>("categoryId"));
+        colCategoryName.setCellValueFactory(new PropertyValueFactory<>("categoryName"));
 
         loadTableData();
     }

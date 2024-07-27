@@ -20,8 +20,8 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
     }
     @Override
     public String save(BookCategory category) throws Exception {
-     String query = "INSERT INTO book book_categories (category_name) VALUES (?)";
-     try(PreparedStatement stmt = connection.prepareStatement(query)){
+     String query = "INSERT INTO book_categories (category_name) VALUES (?)";
+     try(PreparedStatement stmt = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS)){
         stmt.setString(1, category.getCategoryName());
         int rowsAffected = stmt.executeUpdate();
 
@@ -32,7 +32,7 @@ public class BookCategoryDaoImpl implements BookCategoryDao{
             
             return "Saved successfully : " + category.getCategoryId();
         }else {
-            return "Failed to Save";
+            return "Success";
         }
     }
     } else {

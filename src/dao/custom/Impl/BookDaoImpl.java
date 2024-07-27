@@ -1,5 +1,6 @@
 package dao.custom.Impl;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
@@ -8,6 +9,10 @@ import dao.custom.BookDao;
 import entity.BookEntity;
 
 public class BookDaoImpl implements BookDao {
+    private Connection connection;
+     public BookDaoImpl(Connection connection) {
+        this.connection = connection;
+    }
     
 
     @Override
