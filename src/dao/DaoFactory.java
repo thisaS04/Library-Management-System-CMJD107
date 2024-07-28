@@ -4,6 +4,7 @@ import java.sql.Connection;
 
 import dao.custom.Impl.BookCategoryDaoImpl;
 import dao.custom.Impl.BookDaoImpl;
+import dao.custom.Impl.MemberDaoImpl;
 import db.DBConnection;
 
 public class DaoFactory {
@@ -27,12 +28,14 @@ public class DaoFactory {
             return new BookDaoImpl(connection);
             case BOOKCATEGORY:
             return new BookCategoryDaoImpl(connection);
+            case MEMBER:
+            return new MemberDaoImpl(connection);
             default:
             return null;
 }
     }
     public enum DaoTypes {
-        BOOK,BOOKCATEGORY
+        BOOK,BOOKCATEGORY,MEMBER
     }
 
 }

@@ -1,23 +1,23 @@
 package dto;
 
 public class MemberDto {
-    private int id;
+    private Long id;
     private String memberName;
     private String phone;
 
     public MemberDto(){
         
     }
-    public MemberDto(int id, String MemberName, String Phone){
+    public MemberDto(Long id, String memberName, String phone){
         this.id=id;
         this.memberName=memberName;
         this.phone=phone;
 
 }
-    public int getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getMemberName() {
@@ -36,5 +36,6 @@ public class MemberDto {
     public String toString() {
         return "MemberDto [id=" + id + ", memberName=" + memberName + ", phone=" + phone + "]";
     }
+   
 
 }

@@ -1,22 +1,22 @@
 package entity;
 
 public class Member {
-    private int id;
+    private Long id;
     private String memberName;
     private String phone;
 
-    public Member(int id, String MemberName, String Phone){
+    public Member(Long id, String memberName, String phone){
         this.id=id;
         this.memberName=memberName;
         this.phone=phone;
 
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,6 +40,8 @@ public class Member {
     public String toString() {
         return "Member [id=" + id + ", memberName=" + memberName + ", phone=" + phone + "]";
     }
+
+   
 
     
 }
