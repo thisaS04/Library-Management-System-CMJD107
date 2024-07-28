@@ -17,16 +17,16 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public String save(BookEntity entity) throws Exception{
-        boolean isSaved= CrudUtil.executeUpdate("INSERT INTO books VALUES(?,?,?,?,?)",
-        entity.getId(), entity.getTitle(), entity.getAuthor(), entity.getCategoryId(),entity.isAvailable());
-        return isSaved ? "Success" : "Fail";
+        String query = "INSERT INTO books (title,author,category_id,available) VALUES (?,?,?,?)";
+        boolean isSaved = CrudUtil.executeUpdate(query,entity.getTitle(),entity.getAuthor(),entity.getCategoryId(),entity.isAvailable());
+        return isSaved ? "Success": "Fail";
     }
 
     @Override
-    public String update(BookEntity t) throws Exception {
-      boolean isUpdated =  CrudUtil.executeUpdate("UPDATE books SET title=?,author=?,category_id=?,available=? WHERE book_id=?",
-      t.getTitle(),t.getAuthor(),t.getCategoryId(),t.isAvailable());
-      return isUpdated ? "Success" : "Fail";
+    public String update(BookEntity entity) throws Exception {
+     boolean isUpdated = CrudUtil.executeUpdate("UPDATE books SET title=?,author=?,category_id=?,available=? WHERE book_id=?",
+     entity.getTitle(), entity.getAuthor(), entity.getCategoryId(), entity.isAvailable(), entity.getId());
+    return isUpdated ? "Success" : "Fail";
     }
 
     @Override
@@ -37,13 +37,12 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public BookEntity get(Long id) throws Exception {
-        
-            ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books WHERE  book_id=?", id);
-            if (rst.next()) {
-                return new BookEntity(rst.getLong("book_id"), rst.getString("title"),
-                        rst.getString("author"), rst.getLong("category_id"), rst.getBoolean("available"));
-            }
-            return null;
+        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books WHERE book_id=?", id);
+        if (rst.next()) {
+            return new BookEntity(rst.getLong("book_id"), rst.getString("title"),
+                    rst.getString("author"), rst.getLong("category_id"), rst.getBoolean("available"));
+        }
+        return null;
         }
         @Override
         public ArrayList<BookEntity> getAll() throws Exception {
@@ -51,11 +50,11 @@ public class BookDaoImpl implements BookDao {
             ResultSet rst = CrudUtil.executeQuery("SELECT * FROM books");
             while (rst.next()) {
                 BookEntity entity = new BookEntity(
-                    rst.getLong("book_id"),
-                    rst.getString("title"),
-                    rst.getString("author"),
-                    rst.getLong("category_id"),
-                    rst.getBoolean("available")
+                        rst.getLong("book_id"),
+                        rst.getString("title"),
+                        rst.getString("author"),
+                        rst.getLong("category_id"),
+                        rst.getBoolean("available")
                 );
                 bookEntities.add(entity);
             }
