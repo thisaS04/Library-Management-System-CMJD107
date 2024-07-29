@@ -6,6 +6,7 @@ import dao.custom.Impl.BookCategoryDaoImpl;
 import dao.custom.Impl.BookDaoImpl;
 import dao.custom.Impl.MemberDaoImpl;
 import db.DBConnection;
+import entity.Borrowings;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;
@@ -30,12 +31,15 @@ public class DaoFactory {
             return new BookCategoryDaoImpl(connection);
             case MEMBER:
             return new MemberDaoImpl(connection);
+            case BORROWINGS:
+            return new BorrowingsDaoImpl(connection);
+
             default:
             return null;
 }
     }
     public enum DaoTypes {
-        BOOK,BOOKCATEGORY,MEMBER
+        BOOK,BOOKCATEGORY,MEMBER,BORROWINGS
     }
 
 }

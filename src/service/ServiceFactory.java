@@ -3,6 +3,7 @@ package service;
 
 import service.custom.Impl.BookCategoryServiceImpl;
 import service.custom.Impl.BookServiceImpl;
+import service.custom.Impl.BorrowingServiceImpl;
 import service.custom.Impl.MemberServiceImpl;
 
 public class ServiceFactory {
@@ -24,6 +25,9 @@ public class ServiceFactory {
                 return new BookCategoryServiceImpl();
             case MEMBER:
                 return new MemberServiceImpl();
+            case BORROWINGS:
+                return new BorrowingServiceImpl();
+            
 
                 default:
                 return null;
@@ -31,7 +35,7 @@ public class ServiceFactory {
     }
 
 public enum ServiceType{
-        BOOK,BOOK_CATEGORY,MEMBER
+        BOOK,BOOK_CATEGORY,MEMBER, BORROWINGS
     }
 
 
