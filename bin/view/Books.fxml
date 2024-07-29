@@ -74,11 +74,11 @@
    <bottom>
       <TableView fx:id="tblBooks" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text=" book_id" />
-          <TableColumn prefWidth="221.3333740234375" text=" title  " />
-            <TableColumn prefWidth="127.33328247070312" text=" author " />
-            <TableColumn text=" category_id" />
-            <TableColumn prefWidth="95.33331298828125" text=" available " />
+          <TableColumn fx:id="colId" prefWidth="75.0" text=" book_id" />
+          <TableColumn fx:id="colTitle" prefWidth="221.3333740234375" text=" title  " />
+            <TableColumn fx:id="colAuthor" prefWidth="127.33328247070312" text=" author " />
+            <TableColumn fx:id="colCategoryId" text=" category_id" />
+            <TableColumn fx:id="colAvailable" prefWidth="95.33331298828125" text=" available " />
         </columns>
       </TableView>
    </bottom>
