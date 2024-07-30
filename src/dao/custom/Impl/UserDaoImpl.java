@@ -3,12 +3,13 @@ package dao.custom.Impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.sql.SQLException;
 
+import dao.SuperDAO;
 import dao.custom.UserDao;
 import entity.UserEntity;
 
-public class UserDaoImpl implements  UserDao{
+public class UserDaoImpl implements  UserDao,SuperDAO{
 
     private Connection connection;
 
@@ -17,7 +18,7 @@ public class UserDaoImpl implements  UserDao{
     }
 
     @Override
-    public String save(UserEntity user) throws Exception {
+    public void save(UserEntity user) throws Exception {
         String sql = "INSERT INTO users (name,username,phone,password) VALUES (?,?,?,?)";
         try(PreparedStatement stmt = connection.prepareStatement(sql)){
             stmt.setString(1, user.getName());
@@ -26,14 +27,7 @@ public class UserDaoImpl implements  UserDao{
             stmt.setString(4, user.getPassword());
             stmt.executeUpdate();
 
-            int rowsAffected = stmt.executeUpdate();
-            if(rowsAffected > 0){
-                return "User saved Successfully";
-
-            }else {
-                return "Failed to save user";
-            }
-        } catch (Exception e) {
+         } catch (SQLException e) {
             e.printStackTrace();
             throw new Exception("Error saving user", e);
         }

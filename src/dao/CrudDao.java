@@ -9,7 +9,8 @@ public interface CrudDao<T, ID> extends SuperDAO {
      
     String update(T t) throws Exception;
     String delete(Long id) throws Exception;
-    T get(String username) throws Exception;
+    T get(Long id) throws Exception;
     ArrayList<T> getAll() throws Exception;
+    
 }
 
