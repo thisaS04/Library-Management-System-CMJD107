@@ -3,7 +3,7 @@ package dto;
 import java.time.LocalDate;
 
 public class BorrowingsDto {
-    private int borrowingId;
+    private long borrowingId;
     private long bookId;
     private int memberId;
     private LocalDate borrowingDate;
@@ -13,21 +13,20 @@ public class BorrowingsDto {
     public BorrowingsDto(){
 
     }
-
-    public BorrowingsDto (int borrowingId, long bookId, int memberId,LocalDate borrowingDate, LocalDate dueDate, LocalDate returnDate){
-        this.borrowingId=borrowingId;
-        this.bookId= bookId;
-        this.memberId=memberId;
-        this.borrowingDate=borrowingDate;
-        this.dueDate=dueDate;
+    public BorrowingsDto(long borrowingId, long bookId, int memberId, LocalDate borrowingDate, LocalDate dueDate, LocalDate returnDate) {
+        this.borrowingId = borrowingId;
+        this.bookId = bookId;
+        this.memberId = memberId;
+        this.borrowingDate = borrowingDate;
+        this.dueDate = dueDate;
         this.returnDate = returnDate;
     }
 
-    public int getBorrowingId() {
+    public long getBorrowingId() {
         return borrowingId;
     }
 
-    public void setBorrowingId(int borrowingId) {
+    public void setBorrowingId(long borrowingId) {
         this.borrowingId = borrowingId;
     }
 
@@ -76,6 +75,5 @@ public class BorrowingsDto {
         return "BorrowingsDto [borrowingId=" + borrowingId + ", bookId=" + bookId + ", memberId=" + memberId
                 + ", borrowingDate=" + borrowingDate + ", dueDate=" + dueDate + ", returnDate=" + returnDate + "]";
     }
-    
 
 }

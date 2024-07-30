@@ -3,7 +3,7 @@ package entity;
 import java.time.LocalDate;
 
 public class Borrowings {
-    private int borrowingId;
+    private long borrowingId;
     private long bookId;
     private int memberId;
     private LocalDate borrowingDate;
@@ -14,7 +14,7 @@ public class Borrowings {
     public Borrowings(){
 
     }
-public Borrowings(int borrowingId, long bookId, int memberId,LocalDate borrowingDate, LocalDate dueDate, LocalDate returnDate){
+public Borrowings(long borrowingId, long bookId, int memberId,LocalDate borrowingDate, LocalDate dueDate, LocalDate returnDate){
     this.borrowingId=borrowingId;
     this.bookId= bookId;
     this.memberId=memberId;
@@ -22,10 +22,10 @@ public Borrowings(int borrowingId, long bookId, int memberId,LocalDate borrowing
     this.dueDate=dueDate;
     this.returnDate = returnDate;
 }
-public int getBorrowingId() {
+public long getBorrowingId() {
     return borrowingId;
 }
-public void setBorrowingId(int borrowingId) {
+public void setBorrowingId(long borrowingId) {
     this.borrowingId = borrowingId;
 }
 public long getBookId() {
@@ -63,7 +63,6 @@ public String toString() {
     return "Borrowings [borrowingId=" + borrowingId + ", bookId=" + bookId + ", memberId=" + memberId
             + ", borrowingDate=" + borrowingDate + ", dueDate=" + dueDate + ", returnDate=" + returnDate + "]";
 }
-
 
 
 }

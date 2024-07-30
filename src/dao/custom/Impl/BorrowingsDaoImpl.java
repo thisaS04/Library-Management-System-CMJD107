@@ -36,7 +36,7 @@ return rowsAffected > 0 ? "Success" : "Failed";
         
     @Override
     public String update(Borrowings borrowings) throws Exception {
-        String query = "UPDATE borrowing_books_SET  book_id=? ,memberId=? , borrowing_date=? , due_date = ? , return_date = ? WHERE borrowingId=?";
+        String query = "UPDATE borrowing_books SET  book_id=? ,memberId=? , borrowing_date=? , due_date = ? , return_date = ? WHERE borrowingId=?";
         try (PreparedStatement stmt = connection.prepareStatement(query)){
             stmt.setLong(1,borrowings.getBookId());
             stmt.setInt(2,borrowings.getMemberId());

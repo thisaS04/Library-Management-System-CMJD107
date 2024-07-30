@@ -27,8 +27,6 @@ public class ServiceFactory {
                 return new MemberServiceImpl();
             case BORROWINGS:
                 return new BorrowingServiceImpl();
-            
-
                 default:
                 return null;
         }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 
 import dao.custom.Impl.BookCategoryDaoImpl;
 import dao.custom.Impl.BookDaoImpl;
+import dao.custom.Impl.BorrowingsDaoImpl;
 import dao.custom.Impl.MemberDaoImpl;
 import db.DBConnection;
 import entity.Borrowings;
