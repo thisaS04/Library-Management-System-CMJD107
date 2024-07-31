@@ -5,11 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+import dao.SuperDAO;
 import dao.custom.UserDao;
 import entity.UserEntity;
 
-public class UserDaoImpl implements  UserDao{
+public class UserDaoImpl implements  UserDao, SuperDAO{
 
     private Connection connection;
 

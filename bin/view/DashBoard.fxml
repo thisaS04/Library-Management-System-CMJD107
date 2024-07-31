@@ -5,34 +5,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dcdde1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
    <children>
-      <Button fx:id="btnMembers" layoutX="306.0" layoutY="100.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Members">
+      <Button fx:id="btnMembers" layoutX="306.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnMembersOnAction" prefHeight="49.0" prefWidth="115.0" text="Members">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnbooks" layoutX="309.0" layoutY="283.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Books">
+      <Button fx:id="btnbooks" layoutX="309.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="49.0" prefWidth="115.0" text="Books">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnbookCategories" layoutX="435.0" layoutY="190.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Book Categories">
+      <Button fx:id="btnbookCategories" layoutX="435.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnBookCategoriesOnAction" prefHeight="49.0" prefWidth="115.0" text="Book Categories">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnborrowings" layoutX="433.0" layoutY="100.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Borrowings">
+      <Button fx:id="btnborrowings" layoutX="433.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnBorrowingsOnAction" prefHeight="49.0" prefWidth="115.0" text="Borrowings">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnfines" layoutX="437.0" layoutY="283.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="Fines">
+      <Button fx:id="btnfines" layoutX="437.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnFinesOnAction" prefHeight="49.0" prefWidth="115.0" text="Fines">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnsignUp" layoutX="307.0" layoutY="190.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="115.0" text="SignUp">
+      <Button fx:id="btnsignUp" layoutX="307.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="49.0" prefWidth="115.0" text="SignUp">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

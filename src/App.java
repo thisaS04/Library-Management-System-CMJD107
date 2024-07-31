@@ -21,7 +21,7 @@ public class App extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL resource =getClass().getResource("./view/Login.fxml");//fxml file resource
+        URL resource =getClass().getResource("/view/Login.fxml");//fxml file resource
         FXMLLoader loader = new FXMLLoader(resource);
         Parent root = loader.load();
 
