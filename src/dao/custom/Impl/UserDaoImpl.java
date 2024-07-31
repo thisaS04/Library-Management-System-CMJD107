@@ -5,11 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dao.SuperDAO;
+
 import dao.custom.UserDao;
 import entity.UserEntity;
 
-public class UserDaoImpl implements  UserDao,SuperDAO{
+public class UserDaoImpl implements  UserDao{
 
     private Connection connection;
 
@@ -18,18 +18,24 @@ public class UserDaoImpl implements  UserDao,SuperDAO{
     }
 
     @Override
-    public void save(UserEntity user) throws Exception {
+    public String save(UserEntity user) throws Exception {
         String sql = "INSERT INTO users (name,username,phone,password) VALUES (?,?,?,?)";
         try(PreparedStatement stmt = connection.prepareStatement(sql)){
             stmt.setString(1, user.getName());
             stmt.setString(2, user.getUsername());
             stmt.setString(3, user.getPhone());
             stmt.setString(4, user.getPassword());
-            stmt.executeUpdate();
+            int rowsAffected = stmt.executeUpdate();
+            if(rowsAffected > 0){
+                return "User Saved Successfully";
+            } else {
+                throw new Exception("Failed to save User");
 
-         } catch (SQLException e) {
+            }
+        } catch (SQLException e){
             e.printStackTrace();
-            throw new Exception("Error saving user", e);
+            throw new Exception ("Error saving user",e);
+
         }
         }
     
@@ -49,12 +55,14 @@ public class UserDaoImpl implements  UserDao,SuperDAO{
             return new UserEntity(name,username,phone,password);
         }
         return null;
-        }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error retrieving user", e);
         
     }
 
     
-
+    }
     
     
 }

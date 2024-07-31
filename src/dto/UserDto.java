@@ -6,12 +6,14 @@ public class UserDto {
     private String phone;
     private String password;
 
-    public void User(String name, String username, String phone, String password) {
+    public UserDto(String name, String username, String phone, String password) {
         this.name=name;
         this.username=username;
         this.phone=phone;
         this.password=password;
-}
+    }
+
+    
 
     public String getName() {
         return name;

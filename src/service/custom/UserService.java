@@ -1,8 +1,10 @@
 package service.custom;
 
-import entity.UserEntity;
+import dto.UserDto;
+
 
 public interface UserService {
-    void register(UserEntity user) throws Exception;
-    UserEntity getUser(String username) throws Exception;
+    
+    UserDto getUserByUsername(String username) throws Exception;
+    String saveUser(UserDto user) throws Exception;
 }

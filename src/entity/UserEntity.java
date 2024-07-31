@@ -6,16 +6,13 @@ public class UserEntity {
     private String phone;
     private String password;
 
-    public UserEntity(String name2, String username2, String phone2, String password2) {
-        //TODO Auto-generated constructor stub
-    }
-
-    public void User(String name, String username, String phone, String password) {
+    public UserEntity(String name, String username, String phone, String password) {
         this.name=name;
         this.username=username;
         this.phone=phone;
         this.password=password;
-}
+    }
+
 
     public String getName() {
         return name;
