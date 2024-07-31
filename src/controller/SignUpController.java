@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import service.custom.UserService;
-import service.custom.Impl.UserServiceImpl;
+
 
 public class SignUpController {
       @FXML
@@ -34,11 +34,12 @@ public class SignUpController {
     @FXML
     private TextField txtUserName;
 
-    public UserService userService;
-    public SignUpController(){
-        this.userService = new UserServiceImpl(null);
-    }
-    @FXML
+
+    private UserService userService;
+   public void setUserService(UserService userService){
+    this.userService =userService;
+   }
+@FXML
 
     void btnRegisterOnAction(ActionEvent event) {
     
@@ -72,7 +73,7 @@ public class SignUpController {
     }
 }
 
-    @FXML
+@FXML
     void btnBackOnAction(ActionEvent event) {
   try {
             Stage stage = (Stage) btnBack.getScene().getWindow();

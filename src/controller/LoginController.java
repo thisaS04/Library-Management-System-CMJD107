@@ -32,7 +32,8 @@ public class LoginController {
     @FXML
     private TextField txtusername;
 
-    public UserService userService;
+    
+    private UserService userService;
     public LoginController() {
         
     }
@@ -82,25 +83,29 @@ try{
     }
 
     @FXML
-    void hprSignUpOnAction(ActionEvent event) {
-try {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/SignUp.fxml"));
-    Parent root = loader.load();
-    Stage signUpStage = new Stage();
-    signUpStage.setTitle("Admin");
-    signUpStage.setScene(new Scene(root));
-   signUpStage.show(); 
+    void btnSignUpOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/SignUp.fxml"));
+            Parent root = loader.load();
 
-} catch (IOException e) {
-    Alert alert = new Alert(Alert.AlertType.ERROR);
-    alert.setTitle("Sign Up Error");
-    alert.setHeaderText(null);
-    alert.setContentText("Failed to open Sign Up page: " + e.getMessage());
-    alert.showAndWait();
-}
-}
+            SignUpController signUpController = loader.getController();
+            signUpController.setUserService(userService);
+            Stage signUpStage = new Stage();
+            signUpStage.setTitle("Sign Up");
+            signUpStage.setScene(new Scene(root));
+            signUpStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace(); 
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Sign Up Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Failed to open Sign Up page: " + e.getMessage());
+            alert.showAndWait();
+        }
+    }
+    }
     
 
-    }
-   
+    
 
