@@ -1,13 +1,19 @@
 package controller;
 
+import java.io.IOException;
+
 import dto.BookDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -19,6 +25,10 @@ import service.custom.Impl.BookServiceImpl;
 
 public class BookController {
     private BookService bookService = new BookServiceImpl();
+
+    @FXML
+    private Button btnBack;
+
     @FXML
     private Button btnDelete;
 
@@ -169,7 +179,26 @@ public class BookController {
         txtCategoryID.clear();
         txtAvailability.clear();
     }
-}
+
+    @FXML
+    void btnBackBookOnAction(ActionEvent event) {
+       try {
+            Stage stage = (Stage) btnBack.getScene().getWindow();
+            stage.close();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DashBoard.fxml"));
+            Parent root = loader.load();
+            Stage dashBoardStage = new Stage();
+            dashBoardStage.setTitle("Back");
+            dashBoardStage.setScene(new Scene(root));
+            dashBoardStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    
+        }
+    }
+
 
 
 

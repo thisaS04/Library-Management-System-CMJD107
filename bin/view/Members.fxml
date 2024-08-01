@@ -60,5 +60,10 @@
             <TableColumn fx:id="colPhone" prefWidth="122.6666259765625" text="Phone" />
         </columns>
       </TableView>
+      <Button fx:id="btnBack" layoutX="495.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnBackMemberOnAction" prefHeight="27.0" prefWidth="72.0" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

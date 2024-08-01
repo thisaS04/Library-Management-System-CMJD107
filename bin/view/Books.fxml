@@ -47,17 +47,17 @@
             <TextField fx:id="txtAuthor" layoutX="109.0" layoutY="90.0" promptText="Author" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtCategoryID" layoutX="109.0" layoutY="123.0" promptText="category" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <TextField fx:id="txtAvailability" layoutX="111.0" layoutY="151.0" promptText="Availability" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="btnSave" layoutX="336.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnSaveBookOnAction" prefHeight="25.0" prefWidth="55.0" text="Save">
+            <Button fx:id="btnSave" layoutX="303.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnSaveBookOnAction" prefHeight="25.0" prefWidth="55.0" text="Save">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnDelete" layoutX="401.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnDeleteBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Delete">
+            <Button fx:id="btnDelete" layoutX="367.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnDeleteBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Delete">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnUpdate" layoutX="472.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnUpdateBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Update">
+            <Button fx:id="btnUpdate" layoutX="438.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnUpdateBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Update">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -68,6 +68,11 @@
                </font>
             </Label>
             <TextField fx:id="txtId" layoutX="109.0" layoutY="36.0" promptText="Enter Id" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btnBack" layoutX="506.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnBackBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </top>

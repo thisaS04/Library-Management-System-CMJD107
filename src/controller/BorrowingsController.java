@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -12,6 +13,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -20,11 +24,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.BorrowingService;
-import service.custom.MemberService;
 
 public class BorrowingsController {
+
+    @FXML
+    private Button btnBack;
      
     @FXML
     private Button btnClear;
@@ -219,6 +226,22 @@ showAlert(Alert.AlertType.INFORMATION, "Success", "Borrowing Book saved successf
         showAlert(Alert.AlertType.ERROR, "Error", "Failed to update Borrowing Book.");
 
     }
+    }
+    @FXML
+    void btnBackBorrowingOnAction(ActionEvent event) {
+try {
+            Stage stage = (Stage) btnBack.getScene().getWindow();
+            stage.close();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DashBoard.fxml"));
+            Parent root = loader.load();
+            Stage dashBoardStage = new Stage();
+            dashBoardStage.setTitle("Back");
+            dashBoardStage.setScene(new Scene(root));
+            dashBoardStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
