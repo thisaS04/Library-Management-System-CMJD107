@@ -2,10 +2,12 @@ package service;
 
 
 import dao.DaoFactory;
+import dao.custom.FineDao;
 import dao.custom.UserDao;
 import service.custom.Impl.BookCategoryServiceImpl;
 import service.custom.Impl.BookServiceImpl;
 import service.custom.Impl.BorrowingServiceImpl;
+import service.custom.Impl.FineServiceImpl;
 import service.custom.Impl.MemberServiceImpl;
 import service.custom.Impl.UserServiceImpl;
 
@@ -33,13 +35,17 @@ public class ServiceFactory {
             case USER:
             UserDao userDao = (UserDao) DaoFactory.getInstance().getDao(DaoFactory.DaoTypes.USER);
                 return new UserServiceImpl(userDao);
+            case FINE:
+            FineDao fineDao = (FineDao) DaoFactory.getInstance().getDao(DaoFactory.DaoTypes.FINE);
+                return new FineServiceImpl(fineDao);
                 default:
+           
                 return null;
         }
     }
 
 public enum ServiceType{
-        BOOK,BOOK_CATEGORY,MEMBER, BORROWINGS,USER
+        BOOK,BOOK_CATEGORY,MEMBER, BORROWINGS,USER,FINE
     }
 
 
