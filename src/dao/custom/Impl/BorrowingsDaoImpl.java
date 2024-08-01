@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 import dao.custom.BorrowingsDao;
 import entity.Borrowings;
 
@@ -56,15 +57,18 @@ return rowsAffected > 0 ? "Success" : "Failed";
 
     @Override
     public String delete(Long id) throws Exception {
-        String query = "DELETE FROM borrowing_books WHERE  borrowingId = ?";
-        try(PreparedStatement stmt = connection.prepareStatement(query)){
-            stmt.setLong(1,id);
-            int rowsAffected = stmt.executeUpdate();
-            return rowsAffected > 0 ? "Success" : "Failed";
-        } catch (SQLException e) {
-            throw new Exception("Error deleting Borrowings", e);
+        String query = "DELETE FROM borrowing_books WHERE borrowingId = ?";
+    try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        stmt.setLong(1, id);
+        int rowsAffected = stmt.executeUpdate();
+        if (rowsAffected > 0) {
+            return "Success";
+        } else {
+            return "No record found to delete";
         }
-
+    } catch (SQLException e) {
+        throw new Exception("Error deleting Borrowings", e);
+    }
         }
     
 

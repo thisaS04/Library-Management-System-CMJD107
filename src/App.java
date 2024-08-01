@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import service.custom.UserService;
 import service.custom.Impl.UserServiceImpl;
 
+
+//Two login pages load once you sign up. Remove the first one before login in.
+
 public class App extends Application{  
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");

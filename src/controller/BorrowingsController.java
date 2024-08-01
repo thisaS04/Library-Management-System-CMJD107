@@ -116,11 +116,11 @@ public class BorrowingsController {
      @FXML
     public void initialize(){
         colBorrowingId.setCellValueFactory(new PropertyValueFactory<>("borrowingId"));
-        colBookId.setCellValueFactory(new PropertyValueFactory<>("book_id"));
+        colBookId.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         colMemberId.setCellValueFactory(new PropertyValueFactory<>("memberId"));
-        colBorrowingDate.setCellValueFactory(new PropertyValueFactory<>("borrowing_date"));
-        colDueDate.setCellValueFactory(new PropertyValueFactory<>("due_date"));
-        colReturnDate.setCellValueFactory(new PropertyValueFactory<>("return_date"));
+        colBorrowingDate.setCellValueFactory(new PropertyValueFactory<>("borrowingDate"));
+        colDueDate.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
+        colReturnDate.setCellValueFactory(new PropertyValueFactory<>("returnDate"));
         
         loadBorrowings();
     }

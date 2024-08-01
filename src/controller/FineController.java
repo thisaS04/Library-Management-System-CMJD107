@@ -91,9 +91,9 @@ public class FineController {
         
         colFineId.setCellValueFactory(new PropertyValueFactory<>("fineId"));
         colBorrowingId.setCellValueFactory(new PropertyValueFactory<>("borrowingId"));
-        colFineAmount.setCellValueFactory(new PropertyValueFactory<>("fine_amount"));
-        colFineDate.setCellValueFactory(new PropertyValueFactory<>("fine_date"));
-        colIsPaid.setCellValueFactory(new PropertyValueFactory<>("is_paid"));
+        colFineAmount.setCellValueFactory(new PropertyValueFactory<>("fineAmount"));
+        colFineDate.setCellValueFactory(new PropertyValueFactory<>("fineDate"));
+        colIsPaid.setCellValueFactory(new PropertyValueFactory<>("isPaid"));
         
         loadAllFines();
     }
