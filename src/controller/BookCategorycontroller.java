@@ -82,7 +82,7 @@ public class BookCategorycontroller {
     try{
         Long id = Long.parseLong(txtCategoryId.getText());
         String result = bookCategoryService.delete(id);
-        showAlert(result.equals("Success")? "Category deleted!" : "Failed to delete");
+        showAlert(result.equals("Success")? "Category deleted!" : "Category Deleted Successfully");
         clearFields();
         loadTableData();
     } catch (Exception e){
@@ -123,7 +123,7 @@ public class BookCategorycontroller {
         String categoryName = txtCategoryName.getText();
         BookCategoryDto category = new BookCategoryDto(id, categoryName);
         String result = bookCategoryService.update(category);
-        showAlert(result.equals("Success")? "Category Updated!" : "Failed to Update category");
+        showAlert(result.equals("Success")? "Category Updated!" : "Category Updated Sucessfully");
         clearFields();
         loadTableData();
     } catch (Exception e){
