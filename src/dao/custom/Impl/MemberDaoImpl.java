@@ -1,7 +1,9 @@
 package dao.custom.Impl;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import dao.CrudUtil;
@@ -31,8 +33,24 @@ return isUpdated ? "Success" : "Fail";
 
     @Override
     public String delete(Long id) throws Exception {
-        boolean isDeleted = CrudUtil.executeUpdate("DELETE FROM Members WHERE memberId = ?", id);
-        return isDeleted ? "Success" : "Fail";
+        String query = "DELETE FROM borrowing_books WHERE memberId = ?";
+    try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        stmt.setLong(1, id);
+        stmt.executeUpdate();
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw new Exception("Failed to delete related borrowing records", e);
+    }
+
+    query = "DELETE FROM members WHERE memberId = ?";
+    try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        stmt.setLong(1, id);
+        int rowsAffected = stmt.executeUpdate();
+        return rowsAffected > 0 ? "Deleted Successfully" : "Failed to delete";
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw new Exception("Failed to delete the member", e);
+    }
       
     }
 

@@ -25,6 +25,8 @@ public class BookDaoImpl implements BookDao {
            stmt.setString(2, entity.getAuthor());
            stmt.setLong(3, entity.getCategoryId());
            stmt.setBoolean(4, entity.isAvailable());
+           
+
            int rowsAffected = stmt.executeUpdate();
 
            if(rowsAffected > 0){
@@ -54,6 +56,8 @@ public class BookDaoImpl implements BookDao {
             stmt.setString(2, entity.getAuthor());
             stmt.setLong(3, entity.getCategoryId());
             stmt.setBoolean(4, entity.isAvailable());
+            stmt.setLong(5, entity.getId()); 
+
             int rowsAffected = stmt.executeUpdate();
 
             return rowsAffected > 0? "Updated Successfully" : "Failed to update";

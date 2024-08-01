@@ -158,7 +158,7 @@ public class BookController {
             Long categoryId = Long.parseLong(txtCategoryID.getText());
             boolean isAvailable = Boolean.parseBoolean(txtAvailability.getText());
 
-            BookDto bookDto = new BookDto(null, title, author, categoryId, isAvailable);
+            BookDto bookDto = new BookDto(id, title, author, categoryId, isAvailable);
              
             String result = bookService.update(bookDto);
             showAlert(AlertType.INFORMATION, "Info", result);

@@ -43,10 +43,10 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtBookTitle" layoutX="109.0" layoutY="62.0" promptText="Enter Book Title" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtAuthor" layoutX="109.0" layoutY="90.0" promptText="Author" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtCategoryID" layoutX="109.0" layoutY="123.0" promptText="category" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
-            <TextField fx:id="txtAvailability" layoutX="111.0" layoutY="151.0" promptText="Availability" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtBookTitle" layoutX="109.0" layoutY="62.0" promptText="Enter Book Title" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtAuthor" layoutX="109.0" layoutY="90.0" promptText="Author" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtCategoryID" layoutX="109.0" layoutY="118.0" prefHeight="32.0" prefWidth="149.0" promptText="category" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtAvailability" layoutX="108.0" layoutY="151.0" prefHeight="27.0" prefWidth="152.0" promptText="Availability" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <Button fx:id="btnSave" layoutX="303.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnSaveBookOnAction" prefHeight="25.0" prefWidth="55.0" text="Save">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -67,7 +67,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtId" layoutX="109.0" layoutY="36.0" promptText="Enter Id" style="-fx-background-color: tansparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="txtId" layoutX="109.0" layoutY="36.0" promptText="Enter Id" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
             <Button fx:id="btnBack" layoutX="506.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnBackBookOnAction" prefHeight="25.0" prefWidth="63.0" text="Back">
                <font>
                   <Font name="System Bold" size="12.0" />

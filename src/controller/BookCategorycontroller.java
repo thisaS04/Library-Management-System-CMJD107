@@ -107,11 +107,11 @@ public class BookCategorycontroller {
         String categoryName = txtCategoryName.getText();
         BookCategoryDto category = new BookCategoryDto(null, categoryName);
         String result = bookCategoryService.save(category);
-        showAlert(result.equals("Success")? "Category Saved!" : "Failed to Save category");
+        showAlert(result.equals("Success")? "Category Saved!" : "Category Saved Successfully!");
         clearFields();
         loadTableData();
     } catch (Exception e){
-        showAlert("Failed to Save category: "+e.getMessage());
+        showAlert("Failed to Save Category: "+e.getMessage());
     }
     }
     
