@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FineController">
+   <children>
+      <Label layoutX="151.0" layoutY="14.0" text="Returned Books And Fines" textFill="#cc0e0e">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFineId" layoutX="14.0" layoutY="75.0" text="Fine Id : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblborrowingId" layoutX="14.0" layoutY="108.0" text="Borrowing Id : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFineDate" layoutX="14.0" layoutY="139.0" text="Fine Date : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFineAmount" layoutX="207.0" layoutY="75.0" text="Fine Amount :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIsPaid" layoutX="207.0" layoutY="108.0" text="Is Paid ? : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFineId" layoutX="112.0" layoutY="72.0" prefHeight="25.0" prefWidth="65.0" />
+      <TextField fx:id="txtBorrowingId" layoutX="113.0" layoutY="105.0" prefHeight="25.0" prefWidth="65.0" />
+      <TextField fx:id="txtFineDate" layoutX="115.0" layoutY="136.0" prefHeight="25.0" prefWidth="85.0" />
+      <TextField fx:id="txtFineAmount" layoutX="312.0" layoutY="72.0" prefHeight="25.0" prefWidth="85.0" />
+      <Button fx:id="btnSave" layoutX="432.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnSaveFineOnAction" prefHeight="25.0" prefWidth="65.0" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="432.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnFineDeleteOnAction" prefHeight="25.0" prefWidth="65.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="501.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnUpdateFineOnAction" prefHeight="25.0" prefWidth="65.0" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" layoutX="501.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnFineBackOnAction" prefHeight="25.0" prefWidth="65.0" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblFines" layoutX="63.0" layoutY="175.0" prefHeight="200.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="colFineId" prefWidth="75.0" text="fineId" />
+          <TableColumn fx:id="colBorrowingId" prefWidth="75.0" text="borrowingId" />
+            <TableColumn fx:id="colFineAmount" prefWidth="109.33331298828125" text="fine_amount" />
+            <TableColumn fx:id="colFineDate" prefWidth="96.66668701171875" text="fine_date" />
+            <TableColumn fx:id="colIsPaid" prefWidth="120.0" text="is_paid" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtIsPaid" layoutX="312.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" />
+   </children>
+</AnchorPane>
